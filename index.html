@@ -9,10 +9,21 @@
 <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 <style>
 html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
-	#left{position:sticky;
+	@media only screen and (min-width: 600px) {
+  	.left{position:sticky;
 		top:0px;
 	}
+	}
 </style>
+<script>
+  $(window).scroll(function() {
+  var scroll = $(window).scrollTop();
+  if (scroll > 700)
+    $('nav').addClass('left');
+  else
+    $('nav').removeClass('left');
+});
+</script>
 <body class="w3-light-grey">
 
 <!-- Page Container -->
@@ -22,7 +33,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
   <div class="w3-row-padding">
   
     <!-- Left Column -->
-    <div class="w3-third" id="left">
+    <div class="w3-third left">
     
       <div class="w3-white w3-text-grey w3-card-4">
         <div class="w3-display-container">
