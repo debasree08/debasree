@@ -57,6 +57,46 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 }
 }
 
+/* .text span {
+  font-size: 15px;
+  padding: 0 0px;
+  text-transform: uppercase;
+  color: #000;
+  animation: zoomup 2s linear infinite;
+  animation-delay: calc(200ms * var(--i));
+} */
+.text {
+  font-size: 15px;
+  padding: 0 0px;
+  text-transform: uppercase;
+  color: #000;
+  display: inline-block;
+  animation: zoomup 2s linear infinite;
+  animation-delay: calc(200ms * var(--i))
+}
+
+@keyframes zoomup {
+  0%, 100% {
+    color: #00c2ba;
+    filter: blur(1px);
+    text-shadow: 0 0 10px #00c2ba, 0 0 20px #00c2ba, 0 0 30px #00c2ba,
+      0 0 40px #00c2ba, 0 0 60px #00c2ba, 0 0 80px #00c2ba, 0 0 100px #00c2ba,
+      0 0 120px #00c2ba;
+  }
+
+  5%, 95% {
+    filter: blur(0);
+    color: #000;
+    text-shadow: none;
+  }
+}
+
+.container {
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline;
+}
+
 	
 </style>
 <script>
@@ -157,7 +197,23 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
           <h5 class="w3-opacity"><b>Publication</b></h5>
           <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2024</h6>
     	    <a href="#" target="_blank"><p><b>Debasree Das</b>, Shameek Bhattacharjee, Sandip Chakraborty, Bivas Mitra and Sajal K. Das, “Early Detection of Driving Maneuvers for Proactive Congestion Prevention”, in IEEE PerCom,
-            <span class="home-title">Just Accepted</span> (December 2023).</p></a>
+              <span class="container">
+                <span class="text" style="--i:1">J</span>
+                <span class="text" style="--i:2">U</span>
+                <span class="text" style="--i:3">S</span>
+                <span class="text" style="--i:4">T</span>
+                <span class="text" style="--i:5">&nbsp;</span>
+                <span class="text" style="--i:6">A</span>
+                <span class="text" style="--i:7">C</span>
+                <span class="text" style="--i:8">C</span>
+                <span class="text" style="--i:9">E</span>
+                <span class="text" style="--i:10">P</span>
+                <span class="text" style="--i:11">T</span>
+                <span class="text" style="--i:12">E</span>
+                <span class="text" style="--i:13">D</span>
+              </span>(December 2023)</p></a>
+              
+            
             <br/>
             <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2023</h6>
     	    <a href="https://dl.acm.org/doi/10.1145/3609337" target="_blank"><p>Sugandh Pargal, <b>Debasree Das</b>, Bikash Sahoo, Bivas Mitra, and Sandip Chakraborty, “GRIDS: Personalized Guideline Recommendations while Driving Through a New City”, in ACM Transactions on Recommender Systems (TORS), Just Accepted (July 2023).</p></a>
